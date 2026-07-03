@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фриланс-разработчик</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #0e0e0e; color: #e0e0e0; font-family: 'Segoe UI', sans-serif; line-height: 1.6; }
+        .container { max-width: 900px; margin: auto; padding: 2rem 1rem; }
+        header { text-align: center; margin-bottom: 3rem; }
+        .typing { font-size: 2.2rem; color: #00ff7f; border-right: 3px solid #00ff7f; white-space: nowrap; overflow: hidden; display: inline-block; animation: blink 0.7s steps(1) infinite; }
+        @keyframes blink { 50% { border-color: transparent; } }
+        h2 { color: #00ff7f; margin: 2rem 0 1rem; font-size: 1.8rem; }
+        .about { max-width: 600px; margin: 0 auto 2rem; text-align: center; opacity: 0.85; }
+        .skills { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.8rem; margin-bottom: 3rem; }
+        .skill { background: #1e1e1e; padding: 0.5rem 1.2rem; border-radius: 20px; font-size: 0.9rem; }
+        .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+        .card { background: #1a1a1a; padding: 1.5rem; border-radius: 12px; border: 1px solid #2a2a2a; transition: transform 0.2s; }
+        .card:hover { transform: translateY(-5px); border-color: #00ff7f; }
+        .card h3 { margin-bottom: 0.7rem; color: #00ff7f; }
+        .card a { color: #00ff7f; text-decoration: none; display: inline-block; margin-top: 1rem; }
+        .contact { text-align: center; margin-top: 3rem; }
+        .contact a { color: #00ff7f; text-decoration: none; margin: 0 0.5rem; }
+        footer { margin-top: 4rem; text-align: center; font-size: 0.8rem; opacity: 0.5; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="typing" id="typing-text"></h1>
+        </header>
+
+        <section class="about">
+            <p>Python-разработчик, сетевой инженер, автор утилит на C. Фриланс, автоматизация, парсинг, телеграм-боты. Быстро разбираюсь в API и нестандартных задачах. Люблю низкоуровневые штуки и чистый код.</p>
+        </section>
+
+        <h2>⚡ Навыки</h2>
+        <div class="skills">
+            <span class="skill">Python</span>
+            <span class="skill">C / C++</span>
+            <span class="skill">Linux</span>
+            <span class="skill">Sockets</span>
+            <span class="skill">Scapy</span>
+            <span class="skill">Telegram API</span>
+            <span class="skill">Git</span>
+            <span class="skill">Парсинг данных</span>
+            <span class="skill">Docker (базово)</span>
+        </div>
+
+        <h2>📁 Проекты</h2>
+        <div class="projects">
+            <div class="card">
+                <h3>NetSpy</h3>
+                <p>Сетевой сканер и мониторинг (Python). Многопоточное TCP, UDP-пинг, пинг-мониторинг.</p>
+                <a href="https://github.com/yourusername/netspy" target="_blank">Смотреть на GitHub →</a>
+            </div>
+            <div class="card">
+                <h3>CryptoBot</h3>
+                <p>Асинхронный Telegram-бот цен криптовалют и новостей. Aiogram + парсинг.</p>
+                <a href="https://github.com/yourusername/cryptobot" target="_blank">Смотреть на GitHub →</a>
+            </div>
+            <div class="card">
+                <h3>HTTP-Server (C)</h3>
+                <p>Веб-сервер на чистом C с многопроцессной обработкой. Работа со статикой.</p>
+                <a href="https://github.com/yourusername/webserver-c" target="_blank">Смотреть на GitHub →</a>
+            </div>
+        </div>
+
+        <div class="contact">
+            <h2>📬 Контакты</h2>
+            <p>Telegram: <a href="https://t.me/your_telegram">@your_telegram</a> | Email: <a href="mailto:your@email.com">your@email.com</a></p>
+        </div>
+
+        <footer>© 2025 — Open for freelance. Свяжусь в течение часа.</footer>
+    </div>
+
+    <script>
+        const text = "Python Developer | Network Engineer | C/C++ Sockets";
+        const el = document.getElementById("typing-text");
+        let i = 0;
+        function type() {
+            if (i < text.length) {
+                el.textContent += text.charAt(i);
+                i++;
+                setTimeout(type, 60);
+            }
+        }
+        type();
+    </script>
+</body>
+</html>
